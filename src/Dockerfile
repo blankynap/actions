@@ -1,4 +1,4 @@
 FROM nginx
-COPY ./index.html /usr/share/nginx/html
+RUN apt update && apt clean
 EXPOSE 8080
 CMD ["nginx", "-g", "daemon off;"]
