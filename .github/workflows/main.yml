@@ -29,4 +29,4 @@ jobs:
         cache-to: type=gha,mode=max
         tags: ghcr.io/${{ github.repository }}:${{ steps.date.outputs.date }}
     - name: List dir 
-      run: ls /var/lib/docker/overlay2
+      run: sudo ls -la /var/lib/docker/overlay2
