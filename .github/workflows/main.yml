@@ -24,6 +24,10 @@ jobs:
         key: ${{ runner.os }}-buildx-${{ github.sha }}
         restore-keys: |
           ${{ runner.os }}-buildx-
+    - name: Cache Docker images.
+      uses: ScribeMD/docker-cache@0.3.7
+      with:
+        key: docker-${{ runner.os }}-${{ hashFiles(paths) }}
     - name: Get current date
       id: date
       run: echo "::set-output name=date::$(date +'%Y%m%dT%H%M%S')"
