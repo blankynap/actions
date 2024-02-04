@@ -16,13 +16,7 @@ jobs:
       with:
         registry: ghcr.io
         username: ${{ github.actor }}
-        password: ${{ secrets.GH_TOKEN }}       
-    - uses: satackey/action-docker-layer-caching@v0.0.11
-      continue-on-error: true
-      with:
-        key: foo-docker-cache-{hash}
-        restore-keys: |
-          foo-docker-cache-
+        password: ${{ secrets.GH_TOKEN }}
     - name: Get current date
       id: date
       run: echo "::set-output name=date::$(date +'%Y%m%dT%H%M%S')"
@@ -34,3 +28,5 @@ jobs:
         cache-from: type=gha
         cache-to: type=gha,mode=max
         tags: ghcr.io/${{ github.repository }}:${{ steps.date.outputs.date }}
+    - name: List dir 
+      run: ls /var/lib/docker/overlay2
