@@ -42,4 +42,4 @@ jobs:
     
     steps:
       - name: echo image tag
-        run: echo "${{ env.image_tag" }}
+        run: echo "${{ env.image_tag }}"
