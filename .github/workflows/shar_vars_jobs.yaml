@@ -16,9 +16,9 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     outputs:
-      deployment_tag: ${{ steps.step1.outputs.deployment_tag }}
+      deployment_tag: ${{ steps.deployment_tag_id.outputs.deployment_tag }}
     steps:
-      - id: deployment_tag
+      - id: deployment_tag_id
         run: echo "deployment_tag=$(date +%Y%m%d-%H%M)" >> "$GITHUB_OUTPUT"
 
   job2:
