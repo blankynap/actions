@@ -19,7 +19,9 @@ jobs:
       deployment_tag: ${{ steps.deployment_tag_id.outputs.deployment_tag }}
     steps:
       - id: deployment_tag_id
-        run: echo "deployment_tag=$(date +%Y%m%d-%H%M)" >> "$GITHUB_OUTPUT"
+        run: |
+          export TZ='Europe/Berlin'
+          echo "deployment_tag=$(date +%Y%m%d-%H%M)" >> "$GITHUB_OUTPUT"
 
   job2:
     runs-on: ubuntu-latest
