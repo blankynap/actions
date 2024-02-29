@@ -5,7 +5,7 @@ env:
   GH_TOKEN: ${{ github.token }}
 
 permissions:
-  -actions_variables:write
+  actions_variables:write
   
 jobs:
   update:
