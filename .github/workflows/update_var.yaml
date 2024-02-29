@@ -2,7 +2,8 @@ name: Update variable
 on: workflow_dispatch
 
 env:
-  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+  # GH_TOKEN: ${{ secrets.GH_TOKEN }}
+  GITHUB_ACTIONS: ${{ secrets.token }}
   
 jobs:
   update:
@@ -15,4 +16,4 @@ jobs:
         -H "X-GitHub-Api-Version: 2022-11-28" \
         /repos/${{ github.repository }}/actions/variables/CURRENT_VERSION_DEV \
         -f name=CURRENT_VERSION_DEV \
-        -f value=2
+        -f value=3
