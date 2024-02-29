@@ -2,10 +2,7 @@ name: Update variable
 on: workflow_dispatch
 
 env:
-  GH_TOKEN: ${{ github.token }}
-
-permissions:
-  id-token: write
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
   
 jobs:
   update:
