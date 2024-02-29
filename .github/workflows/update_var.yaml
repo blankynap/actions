@@ -4,7 +4,10 @@ on: workflow_dispatch
 env:
   # GH_TOKEN: ${{ secrets.GH_TOKEN }}
   GITHUB_TOKEN: ${{ github.token }}
-  
+
+permissions:
+  actions: write
+
 jobs:
   update:
     runs-on: ubuntu-latest
