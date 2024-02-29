@@ -1,4 +1,4 @@
-name: CI
+name: Update variable
 on: workflow_dispatch
 jobs:
   build:
