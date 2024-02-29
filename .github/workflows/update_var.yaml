@@ -1,0 +1,14 @@
+name: CI
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Update var
+      run: |
+        gh api --method PATCH \
+        -H "Accept: application/vnd.github+json" \
+        -H "X-GitHub-Api-Version: 2022-11-28" \
+        /repos/${{ github.repository }}/actions/variables/CURRENT_VERSION_DEV \
+        -f name=$version_var \
+        -f value=2
