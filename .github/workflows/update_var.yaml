@@ -1,7 +1,11 @@
 name: Update variable
 on: workflow_dispatch
+
+env:
+  GH_TOKEN: ${{ github.token }}
+  
 jobs:
-  build:
+  update:
     runs-on: ubuntu-latest
     steps:
     - name: Update var
