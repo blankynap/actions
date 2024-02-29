@@ -3,6 +3,9 @@ on: workflow_dispatch
 
 env:
   GH_TOKEN: ${{ github.token }}
+
+permissions:
+  -actions_variables:write
   
 jobs:
   update:
