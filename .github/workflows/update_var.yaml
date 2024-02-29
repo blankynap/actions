@@ -3,7 +3,7 @@ on: workflow_dispatch
 
 env:
   # GH_TOKEN: ${{ secrets.GH_TOKEN }}
-  GITHUB_ACTIONS: ${{ secrets.token }}
+  GITHUB_TOKEN: ${{ github.token }}
   
 jobs:
   update:
