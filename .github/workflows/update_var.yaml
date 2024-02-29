@@ -14,5 +14,5 @@ jobs:
         -H "Accept: application/vnd.github+json" \
         -H "X-GitHub-Api-Version: 2022-11-28" \
         /repos/${{ github.repository }}/actions/variables/CURRENT_VERSION_DEV \
-        -f name=$version_var \
+        -f name=CURRENT_VERSION_DEV \
         -f value=2
