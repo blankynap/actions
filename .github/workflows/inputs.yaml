@@ -13,4 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo input
-        run: echo ${{ inputs.tenants }}
+        run: |
+          for tenant in ${{ inputs.tenants }}; do
+            echo $tenant
+          done
