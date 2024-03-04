@@ -1,4 +1,4 @@
-name: CHECLINH INPUTS
+name: Checking inputs
 
 on:
   workflow_dispatch:
