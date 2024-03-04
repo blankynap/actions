@@ -1,0 +1,16 @@
+name: CHECLINH INPUTS
+
+on:
+  workflow_dispatch:
+    inputs:
+      tenants:
+        required: true
+        description: 'Tenant ID (or all)'
+        type: string
+
+jobs:
+ check_inputs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo input
+        run: echo ${{ inputs.tenants }}
