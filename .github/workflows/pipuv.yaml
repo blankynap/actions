@@ -6,9 +6,13 @@ jobs:
     steps:
     - name: install uv
       run: |
+        echo "About to install uv"
         pip install uv
+        echo "About to run uv venv"
         uv venv
+        echo "About to source .venv"
         source .venv/bin/activate
+        echo "About to install aws-cdk-lib"
         pip uv install aws-cdk-lib
     
     - name: run python scritp
