@@ -1,0 +1,17 @@
+name: PIP UV
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: install uv
+      run: |
+        pip3 install uv
+        uv venv
+        source .venv/bin/activate
+        pip uv install aws-cdk-lib
+    
+    - name: run python scritp
+      run: |
+        source .venv/bin/activate
+        python3 -c "from aws_cdk import aws_ecs"
