@@ -13,7 +13,7 @@ jobs:
         echo "About to source .venv"
         source .venv/bin/activate
         echo "About to install aws-cdk-lib"
-        pip uv install aws-cdk-lib
+        uv pip install aws-cdk-lib
     
     - name: run python scritp
       run: |
