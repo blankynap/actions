@@ -6,7 +6,7 @@ jobs:
     steps:
     - name: install uv
       run: |
-        pip3 install uv
+        pip install uv
         uv venv
         source .venv/bin/activate
         pip uv install aws-cdk-lib
