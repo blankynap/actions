@@ -1,0 +1,17 @@
+name: MESSAGES
+on: workflow_dispatch
+jobs:
+  MESSAGES:
+    runs-on: ubuntu-latest
+    steps:
+    - name: echo messages
+      run: |
+        echo "::workflow-command parameter1={data},parameter2={data}::{command value}"
+        echo "::error file=app.js,line=1::Missing semicolon"
+        echo "::debug::Set the Octocat variable"
+        echo "::notice file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
+        echo "::warning file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
+        echo "::add-mask::Mona The Octocat"
+        
+        
+        
