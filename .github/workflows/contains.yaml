@@ -1,0 +1,24 @@
+name: CONTAINS
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'Action (update/destroy may run over all tenants)'
+        required: true
+        default: 'deploy' 
+        type: choice
+        options:
+        - deploy
+        - destroy
+        - destroy-all
+        - update
+
+jobs:
+  check_contains:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check contains
+        if: ${{ contains(inputs.action, 'destroy' }}
+        run: echo ${{ inputs.action }}
+
