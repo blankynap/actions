@@ -16,4 +16,8 @@ jobs:
       - name: print python version
         run: python3 -V
 
+      - name: print python version if test
+        if: ${{ false }}
+        run: python3 -V
+
       
