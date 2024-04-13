@@ -1,4 +1,4 @@
-name: Share variables between jobs
+name: SHARE VARIABLES BETWEEN JOBS
 
 on:
   workflow_dispatch:
