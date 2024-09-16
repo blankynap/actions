@@ -1,4 +1,4 @@
-import reguests
+import requests
 
 resp = requests.get("https://google.com")
 
