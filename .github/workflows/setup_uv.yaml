@@ -20,7 +20,7 @@ jobs:
         working-directory: src
         run: |
           uv sync
-          ls -la
+          . .venv/bin/activate
           uv run main.py
           
         
