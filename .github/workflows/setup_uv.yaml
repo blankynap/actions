@@ -18,5 +18,7 @@ jobs:
 
       - name: Run script
         working-directory: src
-        run: uv run main.py
+        run: |
+          echo $PATH
+          which uv
         
