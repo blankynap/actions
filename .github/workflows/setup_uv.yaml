@@ -16,11 +16,14 @@ jobs:
           version: "0.4.10"
           enable-cache: true
 
-      - name: Run script
+      - name: Install deps
         working-directory: src
         run: |
           uv sync
-          # . .venv/bin/activate
+
+      - name: Run script
+        working-directory: src
+        run: |
           uv run main.py
           
         
