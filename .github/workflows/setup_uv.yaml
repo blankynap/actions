@@ -15,3 +15,8 @@ jobs:
         with:
           version: "0.4.10"
           enable-cache: true
+
+      - name: Run script
+        working-directory: src
+        run: uv run main.py
+        
