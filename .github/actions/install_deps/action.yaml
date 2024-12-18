@@ -2,7 +2,6 @@ name: install dependencies
 
 runs:
   using: "composite"
-    runs-on: ubuntu-latest
     steps:
 
       - name: Checlout repo 
