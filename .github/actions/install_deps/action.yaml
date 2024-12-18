@@ -56,5 +56,6 @@ runs:
     - name: Set output variable
       shell: bash
       run: |
-        echo "output_var='Cache restored')" >> $GITHUB_OUTPUT
+        output="Cache restored"
+        echo "output_var=$output" >> $GITHUB_OUTPUT
               
