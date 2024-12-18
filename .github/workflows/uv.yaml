@@ -12,7 +12,9 @@ jobs:
           python-version: 3.13.1      
           enable-cache: true
 
-      - name: run python scritp
-        run: |
-          python3 -c "from aws_cdk import aws_ecs"
+      - name: Install requirements
+        run: uv pip install aws-cdk-lib
+        
+      - name: run python script
+        run: python3 -c "from aws_cdk import aws_ecs"
                 
