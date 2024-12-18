@@ -15,7 +15,10 @@ jobs:
         with:
           python-version: 3.13.1      
           enable-cache: true
-          cache-dependency-glob: "**/pyproject.toml"
+          cache-dependency-glob: |
+            **/requirements*.txt
+            **/uv.lock
+            **/pyproject.toml
 
       - name: Install Python 3.13.1
         run: uv python install 3.13.1
