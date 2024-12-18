@@ -1,0 +1,11 @@
+name: COMPOSITE
+
+on: workflow_dispatch
+
+jobs:
+  
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup
+        uses: ./.github/action/install_deps
