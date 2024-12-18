@@ -23,6 +23,7 @@ runs:
       run: uv python install 3.13.1
 
     - name: Create VENV
+      shell: bash
       run: uv venv
 
     - name: Install requirements
