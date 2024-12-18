@@ -1,0 +1,28 @@
+[project]
+name = "testproj"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "boto3",
+    "aws-cdk-lib",
+    "requests",
+    "python-dotenv",
+    "numpy",
+    "hydra-core",
+    "streamlit",
+    "pytest",
+    "pandas",
+    "constructs",
+    "pynvml",
+    "torch",
+    "scikit-image",
+    "transformers",
+    "diffusers",
+    "safetensors",
+    "bitsandbytes",
+    "einops",
+    "imagesize",
+    "voluptuous",
+    "toml",
+    "huggingface-hub"
+]
