@@ -6,7 +6,8 @@ dependencies = [
     "boto3",
     "aws-cdk-lib",
     "requests",
-    "dotenv",
+    "python-dotenv",
     "numpy",
-    "hydra-core"
+    "hydra-core",
+    "streamlit"
 ]
