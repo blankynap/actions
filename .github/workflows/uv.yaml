@@ -14,15 +14,15 @@ jobs:
         id: setup-uv
         uses: astral-sh/setup-uv@v4.2.0
         with:
-          python-version: 3.13.1      
+          #python-version: 3.13.1      
           enable-cache: true
           cache-dependency-glob: |
             **/requirements*.txt
             **/uv.lock
             **/pyproject.toml
 
-      - name: Install Python 3.13.1
-        run: uv python install 3.13.1
+      #- name: Install Python 3.13.1
+      #  run: uv python install 3.13.1
 
       #- name: Create VENV
       #  run: uv venv
