@@ -1,4 +1,4 @@
-name: Environment
+name: ENVIRONMENTS
 
 on: 
   workflow_dispatch:
@@ -6,7 +6,10 @@ on:
       environment:
         required: true
         default: DEV
-        type: string
+        type: choice
+        options:
+        - DEV
+        - PROD
 
 jobs:
   
