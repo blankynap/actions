@@ -12,6 +12,9 @@ jobs:
           python-version: 3.13.1      
           #enable-cache: true
 
+      - name: Install Python 3.12
+        run: uv python install 3.13.1
+
       - name: Install requirements
         run: uv pip install aws-cdk-lib --system
         
