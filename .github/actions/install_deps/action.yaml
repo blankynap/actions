@@ -8,6 +8,7 @@ inputs:
 outputs:
   output_var:
     description: 'An output that is computed in the action'
+    value: ${{ steps.set_output_var.outputs.output_var }}
 
 runs:
   using: "composite"
@@ -55,6 +56,7 @@ runs:
 
     - name: Set output variable
       shell: bash
+      id: set_output_var
       run: |
         output="Cache restored"
         echo "Test: $output"
