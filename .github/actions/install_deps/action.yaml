@@ -51,7 +51,10 @@ runs:
     - name: Checking cache restore
       shell: bash
       if: steps.setup-uv.outputs.cache-hit == 'true'
+      run: echo "Cache was restored"
+
+    - name: Set output variable
+      shell: bash
       run: |
-        echo "Cache was restored"
-        echo "output_var=$(echo 'Cache restored')" >> $GITHUB_OUTPUT
+        echo "output_var='Cache restored')" >> $GITHUB_OUTPUT
               
