@@ -5,6 +5,9 @@ inputs:
     required: true
     default: 3.12
 
+outputs:
+  output_var
+
 runs:
   using: "composite"
   steps:
@@ -47,5 +50,7 @@ runs:
     - name: Checking cache restore
       shell: bash
       if: steps.setup-uv.outputs.cache-hit == 'true'
-      run: echo "Cache was restored"
+      run: |
+        echo "Cache was restored"
+        echo "output_var=$(echo 'Cache restored')" >> $GITHUB_OUTPUT
               
