@@ -1,0 +1,24 @@
+name: Environment
+
+on: 
+  workflow_dispatch:
+    inputs:
+      environment:
+        required: true
+        default: DEV
+        type: string
+
+jobs:
+  
+  run_job:
+    environment: ${{ inputs.environment }}
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: echo VAR
+      run: echo ${{ vars.ENV_VAR }}
+
+    - name: echo SECRET
+      run: echo ${{ secrets.ENV_SECRET }}
+    
