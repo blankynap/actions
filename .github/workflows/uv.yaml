@@ -10,7 +10,7 @@ jobs:
         uses: astral-sh/setup-uv@v4.2.0
         with:
           python-version: 3.13.1      
-          enable-cache: true
+          #enable-cache: true
 
       - name: Install requirements
         run: uv pip install aws-cdk-lib
