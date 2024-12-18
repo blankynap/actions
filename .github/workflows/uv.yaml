@@ -13,7 +13,7 @@ jobs:
           #enable-cache: true
 
       - name: Install requirements
-        run: uv pip install aws-cdk-lib
+        run: uv pip install aws-cdk-lib --system
         
       - name: run python script
         run: python3 -c "from aws_cdk import aws_ecs"
