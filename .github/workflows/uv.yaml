@@ -1,0 +1,14 @@
+name: UV
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: astral-sh/setup-uv
+        uses: astral-sh/setup-uv@v4.2.0
+        with:
+          python-version: 3.13.1      
+          enable-cache: true
+                
