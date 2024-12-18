@@ -13,6 +13,8 @@ jobs:
     
       - name: Setup
         uses: ./.github/actions/install_deps
+        with:
+          python_version: 3.13.1
 
       - name: run python script
         run: |
