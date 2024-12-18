@@ -6,6 +6,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+
+      - name: Checlout repo 
+        uses: actions/checkout@v4.2.2
+      
       - name: astral-sh/setup-uv
         uses: astral-sh/setup-uv@v4.2.0
         with:
@@ -27,9 +31,10 @@ jobs:
           python3 -V
 
       - name: Install requirements
+        working-directory: src/
         run: |
           . .venv/bin/activate
-          uv pip install aws-cdk-lib
+          uv pip install -r pyproject.toml
         
       - name: run python script
         run: |
