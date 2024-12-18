@@ -14,5 +14,11 @@ dependencies = [
     "pandas",
     "constructs",
     "pynvml",
-    "torch"
+    "torch",
+    "torchvision",
+    "scikit-image",
+    "transformers",
+    "diffusers",
+    "safetensors",
+    "xformers"
 ]
