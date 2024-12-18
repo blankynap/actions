@@ -11,5 +11,7 @@ dependencies = [
     "hydra-core",
     "streamlit",
     "pytest",
-    "pandas"
+    "pandas",
+    "constructs",
+    "pynvml"
 ]
