@@ -57,5 +57,6 @@ runs:
       shell: bash
       run: |
         output="Cache restored"
+        echo "Test: $output"
         echo "output_var=$output" >> $GITHUB_OUTPUT
               
