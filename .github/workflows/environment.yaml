@@ -19,9 +19,14 @@ jobs:
 
     steps:
 
-    - name: echo VAR
+    - name: echo ENV_VAR
       run: echo ${{ vars.ENV_VAR }}
 
-    - name: echo SECRET
+    - name: echo ENV_SECRET
       run: echo ${{ secrets.ENV_SECRET }}
-    
+
+    - name: echo REPO_VAR
+      run: echo ${{ vars.REPO_VAR }}
+
+    - name: echo REPO_SECRET
+      run: echo ${{ secrets.REPO_SECRET }}
