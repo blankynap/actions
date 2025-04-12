@@ -1,15 +1,5 @@
 version: 2
 updates:
-
-  - package-ecosystem: "pip"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    target-branch: "main"
-    groups:
-      python-requirements:
-        patterns:
-          - "*"
           
   - package-ecosystem: "github-actions"
     directory: "/"
