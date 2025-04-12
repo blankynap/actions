@@ -15,6 +15,10 @@ jobs:
         with:
           version: "latest"
           enable-cache: true
+          cache-dependency-glob: |
+            **/requirements*.txt
+            **/uv.lock
+            **/pyproject.toml
 
       - name: Install deps
         working-directory: src
