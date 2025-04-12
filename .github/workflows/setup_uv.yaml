@@ -19,7 +19,7 @@ jobs:
       - name: Install deps
         working-directory: src
         run: |
-          uv sync
+          uv sync --python 3.13.2
 
       - name: Run script
         working-directory: src
