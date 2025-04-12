@@ -13,7 +13,7 @@ jobs:
       - name: Install uv
         uses: astral-sh/setup-uv@v5
         with:
-          version: "0.4.10"
+          version: "latest"
           enable-cache: true
 
       - name: Install deps
