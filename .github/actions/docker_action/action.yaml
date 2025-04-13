@@ -1,10 +1,14 @@
 name: "Docker action"
 description: 'Greets someone and returns always 42.'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  input_one:  # id of input
+    description: 'Input parameter one'
     required: true
-    default: 'World'
+    default: 'Default_Param_1'
+  input_two: 
+    description: 'Input parameter two'
+    required: true
+    default: 'Default_Param_2'
 outputs:
   answer: # id of output
     description: 'The answer to everything (always 42)'
@@ -12,4 +16,5 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.input_one }}
+    - ${{ inputs.input_two }}
