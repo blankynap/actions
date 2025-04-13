@@ -1,4 +1,4 @@
-name: SETUP UV
+name: SETUP UV WITH DOCKER IMAGE
 
 on: workflow_dispatch
 
