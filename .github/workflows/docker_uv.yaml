@@ -1,0 +1,37 @@
+name: SETUP UV
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/astral-sh/uv:python3.12-bookworm-slim
+    steps:
+
+      - name: Checkout repo
+        uses: actions/checkout@v4.2.2
+
+      # - name: Install uv
+      #   id: setup-uv
+      #   uses: astral-sh/setup-uv@v5
+      #   with:
+      #     version: "latest"
+      #     enable-cache: true
+      #     cache-dependency-glob: |
+      #       **/requirements*.txt
+      #       **/uv.lock
+      #       **/pyproject.toml
+
+      - name: Install deps
+        working-directory: src
+        run: uv sync --python 3.13.2
+
+      - name: Run script
+        working-directory: src
+        run: uv run main.py
+          
+      - name: Checking cache restore
+        if: steps.setup-uv.outputs.cache-hit == 'true'
+        run: echo "Cache was restored"
+        
