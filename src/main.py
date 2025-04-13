@@ -1,3 +1,3 @@
-from aws_cdk import aws_ecs as ecs
+from pydantic_settings import BaseSettings
 
 print("Hello UV")

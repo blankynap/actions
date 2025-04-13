@@ -7,21 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/astral-sh/uv:python3.12-bookworm-slim
+
     steps:
 
       - name: Checkout repo
         uses: actions/checkout@v4.2.2
-
-      # - name: Install uv
-      #   id: setup-uv
-      #   uses: astral-sh/setup-uv@v5
-      #   with:
-      #     version: "latest"
-      #     enable-cache: true
-      #     cache-dependency-glob: |
-      #       **/requirements*.txt
-      #       **/uv.lock
-      #       **/pyproject.toml
 
       - uses: actions/setup-node@v4
         with:
