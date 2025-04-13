@@ -12,7 +12,8 @@ jobs:
         id: action
         uses: ./.github/actions/docker_action
         with:
-          who-to-greet: '@wulfland'
+          input_one: 'some_input_one'
+          input_two: 'some_input_two'
       
       - name: Output the answer
         run: echo "The answer is ${{ steps.action.outputs.answer }}"
