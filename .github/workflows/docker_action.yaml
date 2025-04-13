@@ -10,7 +10,7 @@ jobs:
         
       - name: Run my own container action
         id: action
-        uses: ./github/docker_action
+        uses: ./github/actions/docker_action
         with:
           who-to-greet: '@wulfland'
       
