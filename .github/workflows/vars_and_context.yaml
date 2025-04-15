@@ -1,7 +1,7 @@
 # I am a workflow that demonstrates how to output the different context objects
 # SOURCE: https://github.com/devopselvis/my-github-actions-presentation/blob/main/.github/workflows/variables-and-context.yml
 
-name: Variables and Context
+name: VARS AND CONTEXT
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
