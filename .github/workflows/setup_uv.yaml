@@ -27,11 +27,11 @@ jobs:
 
       - name: Install deps
         working-directory: src
-        run: uv sync --active
+        run: uv sync
 
       - name: Run script
         working-directory: src
-        run: uv run main.py --active
+        run: uv run main.py
           
       - name: Checking cache restore
         if: steps.setup-uv.outputs.cache-hit == 'true'
