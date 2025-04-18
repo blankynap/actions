@@ -27,7 +27,7 @@ jobs:
 
       - name: Install deps
         working-directory: src
-        run: uv sync
+        run: uv sync --active
 
       - name: Run script
         working-directory: src
