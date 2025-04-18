@@ -31,7 +31,7 @@ jobs:
 
       - name: Run script
         working-directory: src
-        run: uv run main.py
+        run: uv run main.py --active
           
       - name: Checking cache restore
         if: steps.setup-uv.outputs.cache-hit == 'true'
