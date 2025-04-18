@@ -23,15 +23,23 @@ jobs:
             **/pyproject.toml
       
       - name: Echo python version
-        run: python3 -V
+        run: |
+          python3 -V
+          which python3
 
       - name: Install deps
         working-directory: src
-        run: uv sync
+        run: |
+          uv sync
+          python3 -V
+          which python3
 
       - name: Run script
         working-directory: src
-        run: uv run main.py
+        run: |
+          uv run main.py
+          python3 -V
+          which python3
           
       - name: Checking cache restore
         if: steps.setup-uv.outputs.cache-hit == 'true'
