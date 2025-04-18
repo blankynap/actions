@@ -15,15 +15,19 @@ jobs:
         uses: astral-sh/setup-uv@v5
         with:
           version: "latest"
+          python-version: 3.12.9
           enable-cache: true
           cache-dependency-glob: |
             **/requirements*.txt
             **/uv.lock
             **/pyproject.toml
+      
+      - name: Echo python version
+        run: python3 -V
 
       - name: Install deps
         working-directory: src
-        run: uv sync --python 3.13.2
+        run: uv sync
 
       - name: Run script
         working-directory: src
